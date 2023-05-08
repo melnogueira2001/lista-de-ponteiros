@@ -1,1 +1,29 @@
+#include <stdio.h>
 
+int main() {
+    int i = 3, j = 5;
+    int *p, *q;
+    p = &i;
+    q = &j;
+
+    // p == &i;
+    if (p == &i) {
+        printf("Verdadeiro\n");
+    } else {
+        printf("Falso\n");
+    }
+
+    // *p - *q;
+    int resultado1 = *p - *q;
+    printf("%d\n", resultado1);
+
+    // **&p;
+    int resultado2 = **&p;
+    printf("%d\n", resultado2);
+
+    // 3 - *p/(*q) + 7;
+    int resultado3 = 3 - *p/(*q) + 7;
+    printf("%d\n", resultado3);
+
+    return 0;
+}
