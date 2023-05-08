@@ -16,10 +16,6 @@ i = *&*&j;
 
 // q = *P; - ilegal
 
-i = (*p) +++ *P;
-
-printf ("i = %d\n", i);
-
-return 0;
+i = (*p) ++ + *P;
 
 }
