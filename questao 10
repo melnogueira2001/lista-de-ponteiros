@@ -1,20 +1,56 @@
-float aloha[10], coisas[10][5], *pf, value = 2.2;
-int i=3;
+#include <stdio.h>
 
-//Verificando a validade dos comandos:
+int main(void) {
+  char x[4], *pc;
+  int xi[4], i, *pi;
+  float xf[4], *pf;
+  double xd[4], *pd;
 
-aloha[2] = value; é válido
+  pc = &x;
+  pi = &xi;
+  pf = &xf;
+  pd = &xd;
 
-scanf("%f", &aloha); é válido
+  // O tipo char é de 1 byte
+  for(i = 1; i < 4; i++){
+    printf("endereço de x + %d = %X\n", i, x+i);
+  }
 
-aloha = value; é inválido
+  printf("\n");
 
-printf("%f", aloha); é inválido
+  // O tipo int ocupa 4 bytes na memória
+  for(i = 1; i < 4; i++){
+    printf("endereço de xi + %d = %X\n", i, xi+i);
+  }
 
-coisas[4][4] = aloha[3]; é válido
+  printf("\n");
 
-coisas[5] = aloha; é inválido
+ 
+  for(i = 1; i < 4; i++){
+    printf("endereço de xf + %d = %X\n", i, xf+i);
+  }
 
-pf = value; é inválido
+  printf("\n");
 
-pf = aloha; é válido
+  s
+  for(i = 1; i < 4; i++){
+    printf("endereço de xd + %d = %X\n", i, xd+i);
+  }
+  return 0;
+}
+
+endereço de x + 1 = A6F4AE6D
+endereço de x + 2 = A6F4AE6E
+endereço de x + 3 = A6F4AE6F
+
+endereço de xi + 1 = A6F4AE54
+endereço de xi + 2 = A6F4AE58
+endereço de xi + 3 = A6F4AE5C
+
+endereço de xf + 1 = A6F4AE44
+endereço de xf + 2 = A6F4AE48
+endereço de xf + 3 = A6F4AE4C
+
+endereço de xd + 1 = A6F4AE28
+endereço de xd + 2 = A6F4AE30
+endereço de xd + 3 = A6F4AE38
